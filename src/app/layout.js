@@ -1,14 +1,46 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import {
+  Chakra_Petch,
+  Inter,
+  Poppins,
+  Unbounded,
+  Sora,
+} from "next/font/google";
+
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const chakraPetch = Chakra_Petch({
+  variable: "--font-chakraPetch",
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
+  display: "swap",
+});
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const unbounded = Unbounded({
+  variable: "--font-unbounded",
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const sora = Sora({
+  variable: "--font-sora",
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata = {
@@ -18,11 +50,18 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`
+          ${chakraPetch.variable}
+          ${inter.variable}
+          ${poppins.variable}
+          ${unbounded.variable}
+          ${sora.variable}
+          antialiased
+        `}
       >
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );

@@ -9,6 +9,7 @@ import { FaDiscourse } from "react-icons/fa";
 import { FaBookmark } from "react-icons/fa6";
 import { MdReviews } from "react-icons/md";
 import { IoSettings } from "react-icons/io5";
+import { FiLogOut } from "react-icons/fi";
 
 
 
@@ -39,7 +40,7 @@ const Sidebar = ({isOpen,setIsOpen}) => {
       <span>My Profile</span>
     </Link> 
   </li>
-  <li className='py-3 px-4 rounded-xl active text-neutral-500 font-sora transition-colors duration-300'>
+  <li className='py-3 px-4 rounded-xl  text-neutral-500 font-sora transition-colors duration-300'>
     <Link href="/Message" className='flex items-center gap-2 text-md'>
       <FaMessage   className='text-[#066dca] transition-colors duration-300'/>
       <span>Message</span>
@@ -69,7 +70,25 @@ const Sidebar = ({isOpen,setIsOpen}) => {
       <span>Settings</span>
     </Link> 
   </li>
+  <p className='text-neutral-500 font-sora tracking-wide py-3'>Admin</p>
+  <ul className='flex sidebar-nav flex-col gap-3'>
+    <li className='py-4 px-4 rounded-xl text-neutral-500 font-sora transition-colors duration-300'>
+      <Link href="/Settings" className='flex items-center gap-2 text-md'>
+      <IoSettings       className='text-[#066dca] transition-colors duration-300'/>
+      <span>Settings</span>
+    </Link>
+    </li>
+  </ul>
 </ul>
+  <ul className='flex sidebar-nav flex-col justify-center items-center gap-3 absolute bottom-0 left-0 right-0 w-full p-5 pb-2'>
+  <li className='w-full py-3 px-4 rounded-xl  text-neutral-500 font-sora transition-colors duration-300'>
+    <Link href="/logout" className='flex items-center gap-2 text-md'>
+      <i className='ri-logout-box-r-line pe-2 text-[#066dca] text-[20px]transition-colors duration-300 w-full'></i>
+      <FiLogOut  className='text-[#066dca] transition-colors duration-300'/>
+      <span>logout</span>
+    </Link> 
+  </li>
+  </ul>
 
     </div>
     </>

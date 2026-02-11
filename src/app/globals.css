@@ -39,3 +39,27 @@
   background-color: var(--prim-color);
   color: var(--color-white);
 }
+.sidebar-nav li.active svg,
+.sidebar-nav li.active i{
+  color: var(--white);
+}
+.sidebar-nav li:hover{
+  color: var(--white);
+  background-color: var(--prim-color);
+}
+.sidebar-nav li:hover svg,
+.sidebar-nav li:hover i{
+  color: var(--white);
+}
+@keyframes fade-in{
+  from{
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+   to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}

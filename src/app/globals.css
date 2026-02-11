@@ -34,3 +34,8 @@
     font-family: var(--font-chakrapetch);
   }
 }
+
+.sidebar-nav li.active{
+  background-color: var(--prim-color);
+  color: var(--color-white);
+}

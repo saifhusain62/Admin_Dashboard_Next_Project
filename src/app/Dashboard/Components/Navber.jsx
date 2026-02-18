@@ -4,7 +4,8 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { FaSearch } from "react-icons/fa";
-import { FaBars } from "react-icons/fa";
+import { FaBarsStaggered } from "react-icons/fa6";
+
 
 export default function Navber({ setIsOpen }) {
   const [isUserMenuOpen, setUserMenuOpen] = useState(false);
@@ -29,11 +30,12 @@ export default function Navber({ setIsOpen }) {
           className="lg:hidden text-xl text-gray-600"
           onClick={() => setIsOpen(prev => !prev)}
         >
-          <FaBars />
+          <FaBarsStaggered />
+
         </button>
 
         {/* Search Box */}
-        <div className="search-box relative h-[45px] hidden lg:flex items-center rounded-md w-70 border-2 border-blue-500 overflow-hidden">
+        <div className="search-box relative h-[45px] hidden lg:flex items-center rounded-md w-70 border-1 border-blue-500 overflow-hidden">
           <input
             type="text"
             placeholder="Search"
@@ -42,6 +44,15 @@ export default function Navber({ setIsOpen }) {
           <button className="absolute right-1 bg-blue-600 hover:bg-blue-700 transition-colors h-[38px] w-[38px] flex items-center justify-center rounded-full">
             <FaSearch className="text-white text-[16px]" />
           </button>
+        </div>
+        <div className='toggle lg:hidden flex cursor-pointer text-2xl' onClick={()=>setIsOpen(true)}>
+               <FaBarsStaggered />
+        </div>
+        <div className='flex gap-3 items-center'>
+           <span className='border border-blue-500 hover:bg-blue-500
+           hover:text-white px-4 rounded-md py-2 cursor-pointer transition-colors duration-300 hidded lg:flex'>
+            Create a New Course
+           </span>
         </div>
 
       </div>

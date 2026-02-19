@@ -78,6 +78,28 @@ export default function Navber({ setIsOpen }) {
                           </p>
                         </div>
                        </div>
+                       <span className='text-gray-500 text-xs font-medium'>
+                        23 mins ago
+                       </span>
+                       </Link>
+                </li>
+                 <li className='text-sm text-gray-700'>
+                       <Link href='/' className='w-full flex justify-between items-center'>
+                       <div className='flex items-start gap-2 '>
+                        <Image  src={user} alt='user-image'
+                        className='w-14 h-14'/>
+                        <div>
+                          <span className='text-black sora-font text-lg'>
+                             Hassnain Mahmud
+                          </span>
+                          <p className='text-gray-500 text-xs'>
+                            Urgent meet with me
+                          </p>
+                        </div>
+                       </div>
+                       <span className='text-gray-500 text-xs font-medium'>
+                        28 mins ago
+                       </span>
                        </Link>
                 </li>
               </ul>

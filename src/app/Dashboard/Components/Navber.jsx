@@ -5,6 +5,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { FaSearch } from "react-icons/fa";
 import { FaBarsStaggered } from "react-icons/fa6";
+import { IoMdNotifications } from "react-icons/io";
+import user from '../Image/user.jpg'
+
 
 
 export default function Navber({ setIsOpen }) {
@@ -53,8 +56,34 @@ export default function Navber({ setIsOpen }) {
            hover:text-white px-4 rounded-md py-2 cursor-pointer transition-colors duration-300 hidded lg:flex'>
             Create a New Course
            </span>
+           <div className="notification cursor-pointer border border-white rounded-md min-w-[45px] min-h-[45px] lg:flex justify-center items-center text-xl p-2 relative hover:bg-blue-500 hover:text-white transition-colors duration-300" onClick={toggleNotification}>
+            <IoMdNotifications />
+            <span className="badge text-xs text-white bg-blue-500 px-1 rounded-2xl absolute top-0 right-0">
+              2
+            </span>
+            {isNotificationOpen &&(
+              <ul className='absolute top-14 right-0 bg-white w-[350px]
+              p-3 flex flex-col gap-2 rounded-2xl shadow-cl animate-fade-in'>
+                <li className='text-sm text-gray-700'>
+                       <Link href='/' className='w-full flex justify-between items-center'>
+                       <div className='flex items-start gap-2 '>
+                        <Image  src={user} alt='user-image'
+                        className='w-14 h-14'/>
+                        <div>
+                          <span className='text-black sora-font text-lg'>
+                            Saif Husain
+                          </span>
+                          <p className='text-gray-500 text-xs'>
+                            You Can stich between artboards
+                          </p>
+                        </div>
+                       </div>
+                       </Link>
+                </li>
+              </ul>
+            )}
+           </div>
         </div>
-
       </div>
     </>
   );

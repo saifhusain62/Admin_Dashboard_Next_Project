@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { FaSearch } from "react-icons/fa";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { IoMdNotifications } from "react-icons/io";
+import { FaCommentDots } from "react-icons/fa";
 import user from '../Image/user.jpg'
 
 
@@ -44,7 +45,7 @@ export default function Navber({ setIsOpen }) {
             placeholder="Search"
             className="h-full w-full ps-4 pr-12 outline-none rounded-full bg-transparent"
           />
-          <button className="absolute right-1 bg-blue-600 hover:bg-blue-700 transition-colors h-[38px] w-[38px] flex items-center justify-center rounded-full">
+          <button className="absolute right-1 bg-blue-600 hover:bg-blue-700 transition-colors h-[38px] w-[38px] flex items-center justify-center rounded-full cursor-pointer">
             <FaSearch className="text-white text-[16px]" />
           </button>
         </div>
@@ -104,6 +105,9 @@ export default function Navber({ setIsOpen }) {
                 </li>
               </ul>
             )}
+           </div>
+           <div className='comment cursor-pointer border border-white rounded-md min-w-[45px] min-h-[45px] hidden lg:flex justify-center text-xl p-2 relative hover:bg-blue-500 hover:text-white transition-colors duration-300'>
+            <FaCommentDots />
            </div>
         </div>
       </div>

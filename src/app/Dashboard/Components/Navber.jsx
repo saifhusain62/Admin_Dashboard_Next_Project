@@ -7,6 +7,9 @@ import { FaSearch } from "react-icons/fa";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { IoMdNotifications } from "react-icons/io";
 import { FaCommentDots } from "react-icons/fa";
+import { FaRegUser } from "react-icons/fa";
+import { IoIosSettings } from "react-icons/io";
+import { MdLogout } from "react-icons/md";
 import user from '../Image/user.jpg'
 
 
@@ -108,6 +111,40 @@ export default function Navber({ setIsOpen }) {
            </div>
            <div className='comment cursor-pointer border border-white rounded-md min-w-[45px] min-h-[45px] hidden lg:flex justify-center text-xl p-2 relative hover:bg-blue-500 hover:text-white transition-colors duration-300'>
             <FaCommentDots />
+           </div>
+           <div className='user cursor-pointer rounded-[50%] w-[50px] h-[50px] flex justify-center items-center relative' onClick={toggleUserMenu}>
+            <Image src={user} alt='user-image' className='w-full h-full relative'/>
+            {isUserMenuOpen&&(
+              <ul className='absolute top-15 right-0 bg-white w-[200px] p-3 flex flex-col gap-3 rounded-2xl shadow-xl animate-fade-in'>
+  <li>
+    <Link
+      href='/profile'
+      className='flex items-center gap-2 text-md hover:text-blue-500 transition-colors duration-300'
+    >
+      <FaRegUser size={20} />
+      My Profile
+    </Link>
+  </li>
+  <li>
+    <Link
+      href='/settings'
+      className='flex items-center gap-2 text-md hover:text-blue-500 transition-colors duration-300'
+    >
+      <IoIosSettings size={20} />
+      Settings
+    </Link>
+  </li>
+  <li>
+    <Link
+      href='/logout'
+      className='flex items-center gap-2 text-md hover:text-blue-500 transition-colors duration-300'
+    >
+      <MdLogout size={20} />
+      Logout
+    </Link>
+  </li>
+</ul>
+            )}
            </div>
         </div>
       </div>

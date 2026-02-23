@@ -42,7 +42,14 @@ const RecentCourseData = [
   {id:6 , name:"CSS3 Course" , time: "8hr 45 min", lesson:10, student: 65 , img:recentcourse6},
 ];
 
-
+const instructorData = [
+  {id:1, name:"Leis Borman" , courses:17 , student:2134, reviews:"4.8(55K+ Students)", img:instructorImage1},
+  {id:2, name:"Saint Oshiea" , courses:10 , student:4567, reviews:"4.8(55K+ Students)", img:instructorImage2},
+  {id:3, name:"Jhon Borman" , courses:4 , student:1242, reviews:"4.8(55K+ Students)", img:instructorImage3},
+  {id:4, name:"Ilisshe Johman" , courses:8 , student:6732, reviews:"4.8(55K+ Students)", img:instructorImage4},
+  {id:5, name:"Katish Borman" , courses:26 , student:2341, reviews:"4.8(55K+ Students)", img:instructorImage5},
+  {id:6, name:"Luta Borman" , courses:20 , student:9826, reviews:"4.8(55K+ Students)", img:instructorImage6},
+];
 
 const Main = () => {
   return (

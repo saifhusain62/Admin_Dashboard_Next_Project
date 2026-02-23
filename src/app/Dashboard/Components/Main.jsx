@@ -20,6 +20,7 @@ import recentcourse4 from '../Image/RecentCourse-4.png'
 import recentcourse5 from '../Image/RecentCourse-5.png'
 import recentcourse6 from '../Image/RecentCourse-6.png'
 import { IoMdStar } from "react-icons/io";
+import dynamic from 'next/dynamic'
 
 const CourseData = [
     
@@ -52,8 +53,13 @@ const instructorData = [
 ];
 
 const Main = () => {
+    
+    const Mychart = dynamic(()=>("../Components/MyChart.jsx"),{ssr:false});
+
   return (
-    <div>Main</div>
+    <>
+
+    </>
   )
 }
 

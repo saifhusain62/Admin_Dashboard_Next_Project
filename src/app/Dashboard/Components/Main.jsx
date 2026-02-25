@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import Link from 'next/link'
-import dashboardicon1 from '../Image/dashbord-item1.png'
+import dashboardicon1 from '../image/dashbord-item1.png'
 import dashboardicon2 from '../Image/dashbord-item2.png'
 import dashboardicon3 from '../Image/dashbord-item3.png'
 import dashboardicon4 from '../Image/dashbord-item4.png'
@@ -133,11 +133,64 @@ const Main = () => {
           </div>
           <div className='dashboard-icon bg-indigo-500 min-w-10 min-h-10 flex justify-center items-center rounded-full cursor-pointer'>
             <Image src={dashboardicon6} alt="dashbord-icon" className='object-cover' />
-
           </div>
-
         </div>
+      </div>
 
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+          <div className='bg-white rounded-xl shadow-md p-4 border border-gray-300'>
+            <div className='flex justify-between items-center mb-4'>
+                 <h2 className='text-sm font-semibold text-gray-800'>Popular Instructor</h2>
+                 <a href="#" className='text-blue-500 text-xs' >View All</a>
+            </div>
+
+            <div className='overflow-y-auto md:overflow-x-hidden rounded-xl'>
+                <table className='w-full min-w-[600px]'>
+                 <thead>
+                   <tr className='bg-gray-300 text-xs text-pink-950'></tr>
+                   <th className='py-3 px-4 text-left cursor-pointer font-medium'>
+                    Instructor
+                   </th>
+                   <th className='py-3 px-4 text-left cursor-pointer font-medium items-center'>
+                    Courses
+                   </th>
+                   <th className='py-3 px-4 text-right cursor-pointer font-medium'>
+                    Students
+                   </th>
+                    <th className='py-3 px-4 text-right cursor-pointer font-medium'>
+                    Reviews
+                   </th>
+                 </thead>
+                 <tbody>
+                  {instructorData.map((instructor)=>(
+                    <tr key={instructor.id} className='border-t border-gray-300 hover:bg-gray-200 transition-colors'>
+                      <td className='flex items-center gap-3 py-3 px-4'>
+                       <Image src={instructor.Image}
+                       alt={instructor.name}
+                       width={40}
+                       height={40}
+                       className='rounded-full'/>
+                      
+                      <span className='text-gray-700 text-xs font-normal'>
+                        {instructor.name}
+                      </span>
+                      </td>
+                      <td className='py-3 px-4 text-gray-700 text-xs font-normal text-center'>
+                      {instructor.courses}
+                      </td>
+                      <td className='py-3 px-4 text-gray-700 text-xs font-normal text-center'>
+                      {instructor.students}
+                      </td>
+                      <td className='py-3 px-4 text-gray-700 text-xs font-normal text-center'>
+                        <IoMdStar className='text-yellow-500 pe-2'/>
+                      {instructor.reviews}
+                      </td>
+                    </tr>
+                  ))}
+                 </tbody>
+                </table>
+               </div>
+          </div>
       </div>
     </>
   )

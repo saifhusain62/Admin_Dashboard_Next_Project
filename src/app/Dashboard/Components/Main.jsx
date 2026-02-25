@@ -67,7 +67,7 @@ const Main = () => {
             <h6 className='text-gray-600 text-2xl font-medium pb-3'>2000+</h6>
             <Link href='/' className='text-blue-500 underline text-xs font-medium cursor-pointer'>View All</Link>
           </div>
-          <div className='dashboard-icon bg-blue-500 min-w-10 min-h-10 flex justify-center items-center rounded-full cursor-pointer'>
+          <div className='dashboard-icon bg-orange-400 min-w-10 min-h-10 flex justify-center items-center rounded-full cursor-pointer'>
             <Image src={dashboardicon1} alt="dashbord-icon" className='object-cover' />
 
           </div>
@@ -79,7 +79,7 @@ const Main = () => {
             <h6 className='text-gray-600 text-2xl font-medium pb-3'>9000+</h6>
             <Link href='/' className='text-blue-500 underline text-xs font-medium cursor-pointer'>View All</Link>
           </div>
-          <div className='dashboard-icon bg-blue-500 min-w-10 min-h-10 flex justify-center items-center rounded-full cursor-pointer'>
+          <div className='dashboard-icon bg-green-500 min-w-10 min-h-10 flex justify-center items-center rounded-full cursor-pointer'>
             <Image src={dashboardicon2} alt="dashbord-icon" className='object-cover' />
 
           </div>
@@ -105,7 +105,7 @@ const Main = () => {
             <h6 className='text-gray-600 text-2xl font-medium pb-3'>100+</h6>
             <Link href='/' className='text-blue-500 underline text-xs font-medium cursor-pointer'>View All</Link>
           </div>
-          <div className='dashboard-icon bg-blue-500 min-w-10 min-h-10 flex justify-center items-center rounded-full cursor-pointer'>
+          <div className='dashboard-icon bg-red-500 min-w-10 min-h-10 flex justify-center items-center rounded-full cursor-pointer'>
             <Image src={dashboardicon4} alt="dashbord-icon" className='object-cover' />
 
           </div>
@@ -118,7 +118,7 @@ const Main = () => {
             <h6 className='text-gray-600 text-2xl font-medium pb-3'>89,000+</h6>
             <Link href='/' className='text-blue-500 underline text-xs font-medium cursor-pointer'>View All</Link>
           </div>
-          <div className='dashboard-icon bg-blue-500 min-w-10 min-h-10 flex justify-center items-center rounded-full cursor-pointer'>
+          <div className='dashboard-icon bg-purple-500 min-w-10 min-h-10 flex justify-center items-center rounded-full cursor-pointer'>
             <Image src={dashboardicon5} alt="dashbord-icon" className='object-cover' />
 
           </div>
@@ -131,7 +131,7 @@ const Main = () => {
             <h6 className='text-gray-600 text-2xl font-medium pb-3'>110,000$</h6>
             <Link href='/' className='text-blue-500 underline text-xs font-medium cursor-pointer'>View All</Link>
           </div>
-          <div className='dashboard-icon bg-blue-500 min-w-10 min-h-10 flex justify-center items-center rounded-full cursor-pointer'>
+          <div className='dashboard-icon bg-indigo-500 min-w-10 min-h-10 flex justify-center items-center rounded-full cursor-pointer'>
             <Image src={dashboardicon6} alt="dashbord-icon" className='object-cover' />
 
           </div>

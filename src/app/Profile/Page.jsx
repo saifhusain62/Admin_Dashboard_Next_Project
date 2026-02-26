@@ -1,14 +1,14 @@
 "use client"
-import { useState } from 'react'
-import Sidebar from '../Components/Sidebar';
-import Navber from '../Components/Navber';
-import Main from '../Components/Main';
+import React from 'react'
+import Sidebar from '../Dashboard/Components/Sidebar';
+import Navber from '../Dashboard/Components/Navber';
+import Main from '../Dashboard/Components/Main';
 
-function DashboardPage() {
-  const [isOpen, setIsOpen] = useState(false);
+function ProfilePage() {
+     const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <div className='flex min-h-[100vh] h-[100vh] overflow-y-hidden'>
+    <div className='flex min-h-[100vh] h-[100vh] overflow-y-hidden'>
         {/* Sidebar */}
         <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
 
@@ -28,8 +28,9 @@ function DashboardPage() {
           </div>
         </div>
       </div>
+      
     </>
-  );
+  )
 }
 
-export default DashboardPage;
+export default ProfilePage

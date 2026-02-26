@@ -1,24 +1,24 @@
 "use client"
 import React from 'react'
 import Link from 'next/link'
-import dashboardicon1 from '../image/dashbord-item1.png'
-import dashboardicon2 from '../Image/dashbord-item2.png'
-import dashboardicon3 from '../Image/dashbord-item3.png'
-import dashboardicon4 from '../Image/dashbord-item4.png'
-import dashboardicon5 from '../Image/dashbord-item5.png'
-import dashboardicon6 from '../Image/dashbord-item6.png'
-import instructorImage1 from '../Image/Instructor-01.png'
-import instructorImage2 from '../Image/Instructor-02.png'
-import instructorImage3 from '../Image/Instructor-03.png'
-import instructorImage4 from '../Image/Instructor-04.png'
-import instructorImage5 from '../Image/Instructor-05.png'
-import instructorImage6 from '../Image/Instructor-06.png'
-import recentcourse1 from '../Image/RecentCourse-1.png'
-import recentcourse2 from '../Image/RecentCourse-2.png'
-import recentcourse3 from '../Image/RecentCourse-3.png'
-import recentcourse4 from '../Image/RecentCourse-4.png'
-import recentcourse5 from '../Image/RecentCourse-5.png'
-import recentcourse6 from '../Image/RecentCourse-6.png'
+import dashboardicon1 from './image/dashbord-item1.png'
+import dashboardicon2 from './Image/dashbord-item2.png'
+import dashboardicon3 from './Image/dashbord-item3.png'
+import dashboardicon4 from './Image/dashbord-item4.png'
+import dashboardicon5 from './Image/dashbord-item5.png'
+import dashboardicon6 from './Image/dashbord-item6.png'
+import instructorImage1 from './Image/Instructor-01.png'
+import instructorImage2 from './Image/Instructor-02.png'
+import instructorImage3 from './Image/Instructor-03.png'
+import instructorImage4 from './Image/Instructor-04.png'
+import instructorImage5 from './Image/Instructor-05.png'
+import instructorImage6 from './Image/Instructor-06.png'
+import recentcourse1 from './Image/RecentCourse-1.png'
+import recentcourse2 from './Image/RecentCourse-2.png'
+import recentcourse3 from './Image/RecentCourse-3.png'
+import recentcourse4 from './Image/RecentCourse-4.png'
+import recentcourse5 from './Image/RecentCourse-5.png'
+import recentcourse6 from './Image/RecentCourse-6.png'
 import { IoMdStar } from "react-icons/io";
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
@@ -45,12 +45,12 @@ const RecentCourseData = [
 ];
 
 const instructorData = [
-  {id:1, name:"Leis Borman" , courses:17 , student:2134, reviews:"4.8(55K+ Students)", Image:instructorImage1},
-  {id:2, name:"Saint Oshiea" , courses:10 , student:4567, reviews:"4.8(55K+ Students)", Image:instructorImage2},
-  {id:3, name:"Jhon Borman" , courses:4 , student:1242, reviews:"4.8(55K+ Students)", Image:instructorImage3},
-  {id:4, name:"Ilisshe Johman" , courses:8 , student:6732, reviews:"4.8(55K+ Students)", Image:instructorImage4},
+  {id:1, name:"Leis Borman" , courses:17 , student:2134, reviews:"4.1(55K+ Students)", Image:instructorImage1},
+  {id:2, name:"Saint Oshiea" , courses:10 , student:4567, reviews:"4.3(55K+ Students)", Image:instructorImage2},
+  {id:3, name:"Jhon Borman" , courses:4 , student:1242, reviews:"5.0(55K+ Students)", Image:instructorImage3},
+  {id:4, name:"Ilisshe Johman" , courses:8 , student:6732, reviews:"4.9(55K+ Students)", Image:instructorImage4},
   {id:5, name:"Katish Borman" , courses:26 , student:2341, reviews:"4.8(55K+ Students)", Image:instructorImage5},
-  {id:6, name:"Luta Borman" , courses:20 , student:9826, reviews:"4.8(55K+ Students)", Image:instructorImage6},
+  {id:6, name:"Luta Borman" , courses:20 , student:9826, reviews:"4.5(55K+ Students)", Image:instructorImage6},
 ];
 
 const Main = () => {
@@ -179,12 +179,69 @@ const Main = () => {
                       {instructor.courses}
                       </td>
                       <td className='py-3 px-4 text-gray-700 text-xs font-normal text-center'>
-                      {instructor.students}
+                      {instructor.student}
+                      </td>
+                      <td className='py-3 px-4 text-gray-700 text-xs font-normal'>
+  <div className='flex items-center justify-center gap-1'>
+    <IoMdStar className='text-yellow-500 text-lg'/>
+    <span>{instructor.reviews}</span>
+  </div>
+</td>
+                    </tr>
+                  ))}
+                 </tbody>
+                </table>
+               </div>
+          </div>
+          <div className='bg-white rounded-xl shadow-md p-4 border border-gray-300'>
+            <div className='flex justify-between items-center mb-4'>
+                 <h2 className='text-sm font-semibold text-gray-800'>Recent Courses</h2>
+                 <a href="#" className='text-blue-500 text-xs' >View All</a>
+            </div>
+
+            <div className='overflow-y-auto md:overflow-x-hidden rounded-xl'>
+                <table className='w-full min-w-[600px]'>
+                 <thead>
+                   <tr className='bg-gray-300 text-xs text-pink-950'></tr>
+                   <th className='py-3 px-4 text-left cursor-pointer font-medium'>
+                    Instructor
+                   </th>
+                   <th className='py-3 px-4 text-left cursor-pointer font-medium items-center'>
+                    Courses
+                   </th>
+                   <th className='py-3 px-4 text-right cursor-pointer font-medium'>
+                    Students
+                   </th>
+                    <th className='py-3 px-4 text-right cursor-pointer font-medium'>
+                    Reviews
+                   </th>
+                 </thead>
+                 <tbody>
+                  {RecentCourseData.map((recent)=>(
+                    <tr key={recent.id} className='border-t border-gray-300 hover:bg-gray-200 transition-colors'>
+                      <td className='flex items-center gap-3 py-3 px-4'>
+                       <Image src={recent.Image}
+                       alt={recent.name}
+                       width={40}
+                       height={40}
+                       className='rounded-full'/>
+                      
+                      <span className='text-gray-700 text-xs font-normal'>
+                        {recent.name}
+                      </span>
                       </td>
                       <td className='py-3 px-4 text-gray-700 text-xs font-normal text-center'>
-                        <IoMdStar className='text-yellow-500 pe-2'/>
-                      {instructor.reviews}
+                      {recent.time}
                       </td>
+                      <td className='py-3 px-4 text-gray-700 text-xs font-normal text-center'>
+                      {recent.students}
+                      </td>
+                      <td className='py-3 px-4 text-gray-700 text-xs font-normal'>
+  <div className='flex items-center justify-center gap-1'>
+    <IoMdStar className='text-yellow-500 text-lg'/>
+    <span>{recent.reviews}</span>
+  </div>
+</td>
                     </tr>
                   ))}
                  </tbody>

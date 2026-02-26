@@ -10,7 +10,7 @@ import { FaCommentDots } from "react-icons/fa";
 import { FaRegUser } from "react-icons/fa";
 import { IoIosSettings } from "react-icons/io";
 import { MdLogout } from "react-icons/md";
-import user from '../Image/user.jpg'
+import user from './Image/user.jpg'
 
 
 
